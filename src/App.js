@@ -1,8 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
+import Header from "./Header/Header";
+import TimeCard from "./TimeCard/TimeCard";
 
-function App() {
-  return <div className="App">Reminder</div>;
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <TimeCard />
+      </div>
+    );
+  }
 }
 
 export default App;

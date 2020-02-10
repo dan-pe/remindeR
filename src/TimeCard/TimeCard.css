@@ -1,0 +1,8 @@
+.timeCard {
+  display: inline-block;
+  margin: 10px 10px;
+  border-style: solid;
+  border-width: 2px;
+  /* padding: 25px 50px; */
+  width: 15%;
+}

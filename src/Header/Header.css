@@ -1,0 +1,6 @@
+.header {
+  display: inline-block;
+  width: 100%;
+  padding: 50px;
+  box-shadow: 0px 5px 15px 5px #aaa4a7;
+}
