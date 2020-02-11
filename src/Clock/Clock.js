@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./ClockCard.css";
+import "./Clock.css";
 
-class ClockCard extends Component {
+class Clock extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,10 +32,10 @@ class ClockCard extends Component {
     }
 
     return (
-      <div className="clockCardContainter">
-        <p className="clockCard">{timePieces[0]}</p>
-        <p className="clockCard">{timePieces[1]}</p>
-        <p className="clockCard" style={secondsStyle}>
+      <div className="clockContainter">
+        <p className="clock">{timePieces[0]}</p>
+        <p className="clock">{timePieces[1]}</p>
+        <p className="clock" style={secondsStyle}>
           {timePieces[2]}
         </p>
       </div>
@@ -43,4 +43,4 @@ class ClockCard extends Component {
   }
 }
 
-export default ClockCard;
+export default Clock;

@@ -6,8 +6,13 @@ import "react-datepicker/dist/react-datepicker.css";
 
 class EventInput extends Component {
   state = {
-    startDate: new Date()
+    startDate: new Date(),
+    eventName: ""
   };
+
+  constructor(props) {
+    super(props);
+  }
 
   handleChangeDate = date => {
     this.setState({
@@ -15,14 +20,25 @@ class EventInput extends Component {
     });
   };
 
-  render() {
+  handleEventNameChange = event => {
+    this.setState({
+      eventName: event.target.value
+    });
+  };
+
+  render(props) {
     return (
       <div className="eventInputContainter">
-        <input type="text" />
+        <input
+          className="eventInput"
+          type="text"
+          onChange={this.handleEventNameChange}
+        />
         <DatePicker
           selected={this.state.startDate}
           onChange={this.state.handleChangeDate}
         />
+        <button onClick={() => this.props.click(this.state)}>Add Event</button>
       </div>
     );
   }
