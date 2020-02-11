@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./TimeCard.css";
+import "./ClockCard.css";
 
-class TimeCard extends Component {
+class ClockCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,18 +27,20 @@ class TimeCard extends Component {
     let timePieces = this.state.currentTime.slice().split(":");
     let secondsStyle = null;
 
-    if(timePieces[2] > 50) {
-    secondsStyle = { color: 'red' };
+    if (timePieces[2] > 50) {
+      secondsStyle = { color: "red" };
     }
 
     return (
-      <div className="timeCardContainter">
-        <p className="timeCard" >{timePieces[0]}</p>
-        <p className="timeCard" >{timePieces[1]}</p>
-        <p className="timeCard" style={secondsStyle}>{timePieces[2]}</p>
+      <div className="clockCardContainter">
+        <p className="clockCard">{timePieces[0]}</p>
+        <p className="clockCard">{timePieces[1]}</p>
+        <p className="clockCard" style={secondsStyle}>
+          {timePieces[2]}
+        </p>
       </div>
     );
   }
 }
 
-export default TimeCard;
+export default ClockCard;
