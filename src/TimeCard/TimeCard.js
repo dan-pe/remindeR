@@ -25,11 +25,17 @@ class TimeCard extends Component {
 
   render() {
     let timePieces = this.state.currentTime.slice().split(":");
+    let secondsStyle = null;
+
+    if(timePieces[2] > 50) {
+    secondsStyle = { color: 'red' };
+    }
+
     return (
-      <div>
-        <p className="timeCard">{timePieces[0]}</p>
-        <p className="timeCard">{timePieces[1]}</p>
-        <p className="timeCard">{timePieces[2]}</p>
+      <div className="timeCardContainter">
+        <p className="timeCard" >{timePieces[0]}</p>
+        <p className="timeCard" >{timePieces[1]}</p>
+        <p className="timeCard" style={secondsStyle}>{timePieces[2]}</p>
       </div>
     );
   }

@@ -2,7 +2,18 @@
   display: inline-block;
   margin: 10px 10px;
   border-style: solid;
-  border-width: 2px;
-  /* padding: 25px 50px; */
+  border-width: 1px;
+  padding: 25px 25px;
   width: 15%;
+  box-shadow: 0px 5px 15px 5px #aaa4a7;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 38px; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  line-height: 1; 
+  
+}
+
+.timeCardContainter {
+  padding-top: 80px;
 }
