@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import DatePicker from "react-datepicker";
+import DateTimePicker from "react-datetime-picker";
+// import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
 
 import "./EventInput.css";
-import "react-datepicker/dist/react-datepicker.css";
 
 class EventInput extends Component {
   state = {
@@ -22,7 +22,7 @@ class EventInput extends Component {
     });
   };
 
-  render(props) {
+  render() {
     return (
       <div className="eventInputContainter">
         <input
@@ -30,11 +30,13 @@ class EventInput extends Component {
           type="text"
           onChange={this.handleEventNameChange}
         />
-        <DatePicker
+        <br />
+        <DateTimePicker
           className="eventTimeInput"
-          selected={this.state.startDate}
-          onChange={this.state.handleChangeDate}
+          onChange={this.handleChangeDate}
+          value={this.state.startDate}
         />
+        <br />
         <button
           className="eventInputButton"
           onClick={() => this.props.click(this.state)}

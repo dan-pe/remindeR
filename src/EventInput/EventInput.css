@@ -12,17 +12,23 @@
 
 .eventNameInput {
   width: 30%;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0px 5px 5px 0px #aaa4a7;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
 }
 
 .eventTimeInput {
-  width: 40%;
+  font-size: 18px;
 }
 
 .eventInputButton {
   background: #ffebcd;
   width: 20%;
-  /* padding: 4px 0; */
-  /* margin: 0px 5px 0px 5px; */
   border-radius: 3px;
 }
 
