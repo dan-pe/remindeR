@@ -3,7 +3,7 @@
   border-style: solid;
   border-width: 1px;
   padding: 25px 25px;
-  width: 50%;
+  width: 46%;
   margin: 40px;
   box-shadow: 0px 5px 15px 5px #aaa4a7;
   font-size: 38px;
@@ -11,7 +11,7 @@
 }
 
 .eventNameInput {
-  width: 30%;
+  width: 60%;
   border-style: solid;
   border-width: 1px;
   box-shadow: 0px 5px 5px 0px #aaa4a7;
@@ -24,12 +24,29 @@
 
 .eventTimeInput {
   font-size: 18px;
+  padding: 16px 0px 16px 0px;
 }
 
 .eventInputButton {
-  background: #ffebcd;
-  width: 20%;
-  border-radius: 3px;
+  color: black !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #faebd7;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.eventInputButton:hover {
+  color: white !important;
+  background: #434343;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
 }
 
 .eventInputButton:hover {

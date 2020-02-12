@@ -12,11 +12,6 @@ class App extends Component {
     timeCards: JSON.parse(localStorage.getItem(this.timeCardsName))
   };
 
-  constructor(props) {
-    super(props);
-    console.log(JSON.parse(localStorage.getItem(this.timeCardsName)));
-  }
-
   eventSubmittedCallback = eventArgs => {
     let storedTimeCards = JSON.parse(localStorage.getItem(this.timeCardsName));
     let timeCard = eventArgs;
@@ -25,13 +20,13 @@ class App extends Component {
       storedTimeCards = [
         {
           name: timeCard.eventName,
-          time: timeCard.startDate.toLocaleTimeString()
+          time: timeCard.startDate
         }
       ];
     } else {
       storedTimeCards.push({
         name: timeCard.eventName,
-        time: timeCard.startDate.toLocaleTimeString()
+        time: timeCard.startDate
       });
     }
 
