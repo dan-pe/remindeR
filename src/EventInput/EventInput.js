@@ -10,10 +10,6 @@ class EventInput extends Component {
     eventName: ""
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   handleChangeDate = date => {
     this.setState({
       startDate: date
@@ -30,15 +26,21 @@ class EventInput extends Component {
     return (
       <div className="eventInputContainter">
         <input
-          className="eventInput"
+          className="eventNameInput"
           type="text"
           onChange={this.handleEventNameChange}
         />
         <DatePicker
+          className="eventTimeInput"
           selected={this.state.startDate}
           onChange={this.state.handleChangeDate}
         />
-        <button onClick={() => this.props.click(this.state)}>Add Event</button>
+        <button
+          className="eventInputButton"
+          onClick={() => this.props.click(this.state)}
+        >
+          Add Event
+        </button>
       </div>
     );
   }
