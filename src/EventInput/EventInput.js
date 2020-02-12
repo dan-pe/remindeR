@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import DateTimePicker from "react-datetime-picker";
-// import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle';
 
 import "./EventInput.css";
 
 class EventInput extends Component {
   state = {
     startDate: new Date(),
-    eventName: ""
+    eventName: "Type in an event name!"
   };
 
   handleChangeDate = date => {
@@ -22,6 +21,12 @@ class EventInput extends Component {
     });
   };
 
+  isInputValid() {
+    if (this.state.eventName.length < 1) {
+      return true;
+    } else return false;
+  }
+
   render() {
     return (
       <div className="eventInputContainter">
@@ -29,6 +34,7 @@ class EventInput extends Component {
           className="eventNameInput"
           type="text"
           onChange={this.handleEventNameChange}
+          value={this.state.eventName}
         />
         <br />
         <DateTimePicker
@@ -40,6 +46,7 @@ class EventInput extends Component {
         <button
           className="eventInputButton"
           onClick={() => this.props.click(this.state)}
+          disabled={this.isInputValid()}
         >
           Add Event
         </button>
